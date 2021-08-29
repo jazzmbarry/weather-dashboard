@@ -1,0 +1,35 @@
+header {
+    text-align: center;
+}
+
+.row {
+    border: 1px solid rgb(211, 41, 41);
+    display: flex;
+}
+
+.search-and-history {
+    border: 1px solid rgb(48, 94, 11);
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+input {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+}
+
+.info-and-forecast {
+    border: 1px solid rgb(33, 26, 99);
+}
+
+.forecast {
+    border-top: 1px solid gray;
+}
+
+footer h3 {
+    text-align: center;
+}

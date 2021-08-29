@@ -4,28 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <!-- My Style Sheet -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Weather Dashboard</title>
 </head>
 <body>
     <header>
         <h1>
-            Weather Dashboard
+            Weather Dashboard 
         </h1>
+        <h9>Made by Jazzmbary</h9>
     </header>
-    <main>
-        <div class="search-and-history">
-            <div class="search">Search for a City</div>
-            <div class="history">Your history here</div>
-        </div>
-        <div class="info-and-forecast">
-            <div class="info">Your City Here</div>
-            <div class="forecast">5-Day Forecast</div>
+    <main class="container">
+        <div class="row">
+            <div class="search-and-history col-3">
+                <div>
+                    <h2 id="searchTitle">
+                        Search for a City
+                    </h2>
+                    <input id="searchInput" type="text" placeholder="Search for a City" value="">
+                    <button id="searchButton" type="submit">
+                        Search
+                    </button>  
+                </div>
+                <div class="history">
+                    Your history here
+                </div>
+            </div>
+            <div class="info-and-forecast col-9">
+                <div class="info">
+                    Your Searched City Here
+                </div>
+                <div class="forecast">
+                    5-Day Forecast
+                </div>
+            </div>
         </div>
     </main>
-    <footer>
-        Made by jazzmbarry
-    </footer>
 <script src="assets/js/script.js"></script>
 </body>
 </html>
