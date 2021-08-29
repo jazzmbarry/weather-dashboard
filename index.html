@@ -24,25 +24,31 @@
                     <h2 id="searchTitle">
                         Search for a City
                     </h2>
-                    <input id="searchInput" type="text" placeholder="Search for a City" value="">
-                    <button id="searchButton" type="submit">
+                    <input id="searchInput" type="text" placeholder="Search for a City"></input>
+                    <button onclick="search()" id="searchButton" type="submit">
                         Search
                     </button>  
                 </div>
-                <div class="history">
-                    Your history here
+                <div class="history" id="history">
+                    Search History
                 </div>
             </div>
             <div class="info-and-forecast col-9">
-                <div class="info">
+                <div class="info" id="info">
                     Your Searched City Here
                 </div>
-                <div class="forecast">
+                <div class="forecast" id="forecast">
                     5-Day Forecast
                 </div>
             </div>
         </div>
-    </main>
+    </main>    
+   
+<!-- JQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Moment -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<!-- My Code -->
 <script src="assets/js/script.js"></script>
 </body>
 </html>
