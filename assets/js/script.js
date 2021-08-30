@@ -80,7 +80,7 @@ var search = function () {
                     infoCityWindEl.textContent = data.current.wind_speed + ' mph'
                     infoCityHumidityEl.textContent = data.current.humidity + '%'
                     infoCityUVEl.textContent = data.current.uvi
-
+                    
                     // Set up 5 Day Forcast
                     // Day 1
                     day1DateEl.textContent = " " + moment().add(1, 'days').format('MM-DD-YYYY')
@@ -113,12 +113,48 @@ var search = function () {
                     day5HumidityEl.textContent = data.daily[4].humidity + '%'
 
 
-
-
-
-
+                    // if for UV Color
+                    if (data.current.uvi < 3) {
+                        infoCityUVEl.removeAttribute('style')
+                        console.log('test<3')
+                        infoCityUVEl.style.backgroundColor = "green"
+                        
+                        
+                    }
+                    else if (data.current.uvi >= 3 && data.current.uvi < 6) {
+                        infoCityUVEl.removeAttribute('style')
+                        console.log('test<6')
+                        infoCityUVEl.style.backgroundColor = "yellow"
+                        
+            
+                    }
+                    else if (data.current.uvi >= 6 && data.current.uvi < 8) {
+                        infoCityUVEl.removeAttribute('style')
+                        console.log('test<8')
+                        infoCityUVEl.style.backgroundColor = "red"
+                
+            
+                    }
+                    else if (data.current.uvi >= 8 && data.current.uvi <11) {
+                        infoCityUVEl.removeAttribute('style')
+                        console.log('test<11')
+                        infoCityUVEl.style.backgroundColor = "purple"
+                        
+            
+                    }
+                    else if (data.current.uvi >= 11) {
+                        infoCityUVEl.removeAttribute('style')
+                        console.log('test>11')
+                        infoCityUVEl.style.backgroundColor = "blue"
+                    
+            
+                    }
+                    else {
+                        infoCityUVEl.removeAttribute('style')
+                        console.log('testAllElse')
+                        infoCityUVEl.style.backgroundColor = "grey"
+                    
+                    }
                 })
         })
-
-
 }

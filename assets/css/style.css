@@ -26,6 +26,11 @@ button {
     border: 1px solid rgb(33, 26, 99);
 }
 
+#infoCityUV {
+    background-color: red;
+    color: black;
+}
+
 .forecast {
     border-top: 1px solid gray;
     display: flex;
