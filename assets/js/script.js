@@ -39,6 +39,7 @@ var day5HumidityEl = document.getElementById('day5Humidity')
 
 var position = 0
 
+
 var saveHistory = function (cityName) {
     var history = document.createElement('button')
     history.setAttribute('id', position)
@@ -73,6 +74,30 @@ var search = function () {
                 .then(function (data) {
                     console.log(data)
 
+                    var iconC = 0
+
+                    var iconChange = function () {
+                        if (data.daily[iconC].weather[0].main === "Clear") {
+                            var icon = "☀"
+                            iconC++
+                            return icon
+                        } else if (data.daily[iconC].weather[0].main === "Clouds") {
+                            var icon = "☁"
+                            iconC++
+                            return icon
+                        } else if (data.daily[iconC].weather[0].main === "Rain") {
+                            var icon = "🌧"
+                            iconC++
+                            return icon
+                        } else {
+                            var icon = "💦"
+                            iconC++
+                            return icon
+                        }
+                        
+                    }
+
+
                     // Set up Current Day Info
                     infoCityEl.textContent = cityName
                     infoCityDateEl.textContent = " " + moment().format('MM-DD-YYYY')
@@ -83,31 +108,31 @@ var search = function () {
                     
                     // Set up 5 Day Forcast
                     // Day 1
-                    day1DateEl.textContent = " " + moment().add(1, 'days').format('MM-DD-YYYY')
+                    day1DateEl.textContent = " " + moment().add(1, 'days').format('MM-DD-YYYY') + " " + iconChange()
                     day1TempEl.textContent = data.daily[0].temp.day + ' °F'
                     day1WindEl.textContent = data.daily[0].wind_speed + ' mph'
                     day1HumidityEl.textContent = data.daily[0].humidity + '%'
 
                     // Day 2
-                    day2DateEl.textContent = " " + moment().add(2, 'days').format('MM-DD-YYYY')
+                    day2DateEl.textContent = " " + moment().add(2, 'days').format('MM-DD-YYYY') + " " + iconChange()        
                     day2TempEl.textContent = data.daily[1].temp.day + ' °F'
                     day2WindEl.textContent = data.daily[1].wind_speed + ' mph'
                     day2HumidityEl.textContent = data.daily[1].humidity + '%'
 
                     // Day 3
-                    day3DateEl.textContent = " " + moment().add(3, 'days').format('MM-DD-YYYY')
+                    day3DateEl.textContent = " " + moment().add(3, 'days').format('MM-DD-YYYY') + " " + iconChange()
                     day3TempEl.textContent = data.daily[2].temp.day + ' °F'
                     day3WindEl.textContent = data.daily[2].wind_speed + ' mph'
                     day3HumidityEl.textContent = data.daily[2].humidity + '%'
 
                     // Day 4
-                    day4DateEl.textContent = " " + moment().add(4, 'days').format('MM-DD-YYYY')
+                    day4DateEl.textContent = " " + moment().add(4, 'days').format('MM-DD-YYYY') + " " + iconChange()
                     day4TempEl.textContent = data.daily[3].temp.day + ' °F'
                     day4WindEl.textContent = data.daily[3].wind_speed + ' mph'
                     day4HumidityEl.textContent = data.daily[3].humidity + '%'
 
                     // Day 5
-                    day5DateEl.textContent = " " + moment().add(5, 'days').format('MM-DD-YYYY')
+                    day5DateEl.textContent = " " + moment().add(5, 'days').format('MM-DD-YYYY') + " " + iconChange()
                     day5TempEl.textContent = data.daily[4].temp.day + ' °F'
                     day5WindEl.textContent = data.daily[4].wind_speed + ' mph'
                     day5HumidityEl.textContent = data.daily[4].humidity + '%'
