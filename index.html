@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- BootStrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <!-- My Style Sheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Weather Dashboard</title>
 </head>
+
 <body>
     <header>
         <h1>
-            Weather Dashboard 
+            Weather Dashboard
         </h1>
         <h9>Made by Jazzmbary</h9>
     </header>
@@ -27,7 +29,7 @@
                     <input id="searchInput" type="text" placeholder="Search for a City"></input>
                     <button onclick="search()" id="searchButton" type="submit">
                         Search
-                    </button>  
+                    </button>
                 </div>
                 <div class="history" id="history">
                     Search History
@@ -35,20 +37,60 @@
             </div>
             <div class="info-and-forecast col-9">
                 <div class="info" id="info">
-                    Your Searched City Here
+                    <h2><span id="infoCity">Your Searched City</span><span id="infoCityDate"> Today's Date</span></h2>
+                    <h2>Temp: <span id="infoCityTemp"></span></h2>
+                    <h2>Wind: <span id="infoCityWind"></span></h2>
+                    <h2>Humidity: <span id="infoCityHumidity"></span></h2>
+                    <h2>UV Index: <span id="infoCityUV"></span></h2>
                 </div>
                 <div class="forecast" id="forecast">
-                    5-Day Forecast
+                    <div id="day1">
+                        <h2><span id="day1Date"> Date</span>
+                        </h2>
+                        <h2>Temp: <span id="day1Temp"></span></h2>
+                        <h2>Wind: <span id="day1Wind"></span></h2>
+                        <h2>Humidity: <span id="day1Humidity"></span></h2>
+                    </div>
+                    <div id="day2">
+                        <h2><span id="day2Date"> Date</span>
+                        </h2>
+                        <h2>Temp: <span id="day2Temp"></span></h2>
+                        <h2>Wind: <span id="day2Wind"></span></h2>
+                        <h2>Humidity: <span id="day2Humidity"></span></h2>
+                    </div>
+                    <div id="day3">
+                        <h2><span id="day3Date"> Date</span>
+                        </h2>
+                        <h2>Temp: <span id="day3Temp"></span></h2>
+                        <h2>Wind: <span id="day3Wind"></span></h2>
+                        <h2>Humidity: <span id="day3Humidity"></span></h2>
+                    </div>
+                    <div id="day4">
+                        <h2><span id="day4Date"> Date</span>
+                        </h2>
+                        <h2>Temp: <span id="day4Temp"></span></h2>
+                        <h2>Wind: <span id="day4Wind"></span></h2>
+                        <h2>Humidity: <span id="day4Humidity"></span></h2>
+                    </div>
+                    <div id="day5">
+                        <h2><span id="day5Date"> Date</span>
+                        </h2>
+                        <h2>Temp: <span id="day5Temp"></span></h2>
+                        <h2>Wind: <span id="day5Wind"></span></h2>
+                        <h2>Humidity: <span id="day5Humidity"></span></h2>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </main>    
-   
-<!-- JQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- Moment -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-<!-- My Code -->
-<script src="assets/js/script.js"></script>
+    </main>
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Moment -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <!-- My Code -->
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
