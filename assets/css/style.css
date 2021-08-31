@@ -1,14 +1,21 @@
+* {
+    text-shadow: 1px 1px 2px slategray;
+}
+
+
+
 header {
+    background-color:teal;
     text-align: center;
 }
 
 .row {
-    border: 1px solid rgb(211, 41, 41);
+    /* border: 1px solid rgb(211, 41, 41); */
     display: flex;
 }
 
 .search-and-history {
-    border: 1px solid rgb(48, 94, 11);
+    /* border: 1px solid rgb(48, 94, 11); */
     display: flex;
     flex-direction: column;
     align-content: flex-start;
@@ -20,11 +27,22 @@ input {
 
 button {
     width: 100%;
+    border-radius: 5px;
+    background-color: royalblue;
+    margin-top: 5px;
+}
+button:hover {
+    background-color: skyblue;
+}
+
+.history {
+    margin-top: 5px;
+    border-top: 1px solid black;
 }
 
 .info-and-forecast {
-    border: 1px solid rgb(33, 26, 99);
-}
+    border-left: 1px solid black;
+} 
 
 #infoCityUV {
     background-color: red;
@@ -35,6 +53,11 @@ button {
     border-top: 1px solid gray;
     display: flex;
     justify-content: space-around;
+}
+
+.forecast div {
+    background-color: rgb(176, 183, 190);
+    padding: 5px;
 }
 
 .forecast h2 {
